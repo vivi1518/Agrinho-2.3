@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Forte, Futuro Sustentável</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --bg:#f4f9f4;
+    --text:#333;
+    --card:#fff;
+    --nav:#2e8b57;
+}
+
+body.dark{
+    --bg:#121212;
+    --text:#e4e4e4;
+    --card:#1e1e1e;
+    --nav:#1a1a1a;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:var(--nav);
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+    
+.hero div{
+    background:rgba(0,0,0,.55);
+    padding:30px;
+    border-radius:15px;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#3cb371;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#2e8b57;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    flex:1;
+    min-width:250px;
+    background:var(--card);
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card a{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#2e8b57;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.galeria img{
+    width:32%;
+    border-radius:10px;
+}
+
+iframe{
+    width:100%;
+    border:none;
+    border-radius:10px;
+}
+
+footer{
+    background:var(--nav);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2rem;
+}
+
+.galeria img{
+    width:100%;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="acessibilidade">
+    <button onclick="alterarFonte(1)">A+</button>
+    <button onclick="alterarFonte(-1)">A-</button>
+    <button onclick="alternarTema()">🌙</button>
+    <button onclick="lerPagina()">🔊</button>
+    <button onclick="pararLeitura()">⏹</button>
+</div>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#agro">Agro</a>
+    <a href="#sustentavel">Sustentável</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#video">Vídeo</a>
+    <a href="#fontes">Fontes</a>
+</nav>
+
+<section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-conteudo">
+        <h1>🌱 Agro Forte: Futuro Sustentável</h1>
+
+        <p>
+            Tecnologia, inovação e responsabilidade ambiental transformando
+            o campo e construindo um futuro melhor para todos.
+        </p>
+
+<a href="#agro" class="btn">
+    Saiba mais
+</a>
+    </div>
+</section>
+    
+<main>
+
+<section id="agro">
+    <h2>🚜 Agro Forte</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Produção</h3>
+            <p>O agronegócio produz alimentos, gera renda e movimenta a economia brasileira.</p>
+        </div>
+
+        <div class="card">
+            <h3>Tecnologia</h3>
+            <p>Drones, sensores e inteligência artificial tornam a produção mais eficiente.</p>
+        </div>
+
+        <div class="card">
+            <h3>Desenvolvimento</h3>
+            <p>O campo gera empregos e fortalece comunidades rurais.</p>
+        </div>
+
+    </div>
+</section>
+
+    <section id="beneficios">
+    <h2>Benefícios para a Sociedade</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🍎 Segurança Alimentar</h3>
+            <p>Produção suficiente e de qualidade para abastecer a população.</p>
+        </div>
+
+        <div class="card">
+            <h3>💼 Geração de Empregos</h3>
+            <p>O agronegócio movimenta a economia e cria oportunidades.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Preservação Ambiental</h3>
+            <p>Práticas sustentáveis reduzem impactos negativos.</p>
+        </div>
+    </div>
+</section>
+    
+<section id="sustentavel" class="secao">
+    <div class="container">
+        <h2>🌱 Sustentabilidade no Campo</h2>
+
+        <p class="descricao">
+            A sustentabilidade é essencial para garantir que as futuras gerações
+            tenham acesso aos recursos naturais necessários para a produção de alimentos
+            e para a manutenção da vida no planeta. No meio rural, práticas sustentáveis
+            contribuem para aumentar a produtividade sem causar danos ao meio ambiente.
+        </p>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <div class="card-icon">🚁</div>
+
+                <h3>Drones no Campo</h3>
+
+                <p>
+                    Auxiliam no monitoramento das lavouras, identificando pragas,
+                    falhas no plantio e áreas que necessitam de maior atenção.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💧</div>
+
+                <h3>Irrigação Inteligente</h3>
+
+                <p>
+                    Sistemas automatizados reduzem o desperdício de água e
+                    garantem maior eficiência na produção agrícola.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">☀️</div>
+
+                <h3>Energia Renovável</h3>
+
+                <p>
+                    Painéis solares e biodigestores ajudam a tornar as propriedades
+                    rurais mais sustentáveis e econômicas.
+                </p>
+            </div>
+
+        </div>
+
+        <h3>🌍 Por que a sustentabilidade é importante?</h3>
+
+        <a href="https://brasil.un.org/pt-br/sdgs" target="_blank" class="btn-sustentabilidade">
+            Saiba mais sobre sustentabilidade
+        </a>
+
+    </div>
+</section>
+
+<section id="galeria">
+    <h2>📸 Galeria</h2>
+
+    <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" alt="Plantação">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Campo">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Agricultura">
+    </div>
+</section>
+
+<section id="video">
+    <h2>🎥 Sustentabilidade na prática</h2>
+
+    <iframe
+        height="500"
+        src="https://www.youtube.com/embed/PJ50lwwy_hs"
+        allowfullscreen>
+    </iframe>
+</section>
+    <section id="fontes" class="secao">
+    <div class="container">
+        <h2>📚 Fontes Confiáveis</h2>
+
+        <a href="#fontes" class="btn-fonte">
+    Fontes confiáveis
+</a>
+        <div class="cards-grid">
+
+            <div class="card">
+                <div class="card-icon">🔬</div>
+
+                <h3>EMBRAPA</h3>
+
+                <p>
+                    Empresa responsável pelo desenvolvimento de pesquisas e tecnologias
+                    que promovem uma agricultura mais produtiva e sustentável.
+                </p>
+
+                <a href="https://www.embrapa.br/" target="_blank" class="btn-fonte">
+                    Visitar site →
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌾</div>
+
+                <h3>Sistema FAEP/SENAR-PR</h3>
+
+                <p>
+                    Instituição parceira do Programa Agrinho que promove educação,
+                    capacitação e desenvolvimento sustentável no meio rural.
+                </p>
+
+                <a href="https://www.sistemafaep.org.br/" target="_blank" class="btn-fonte">
+                    Visitar site →
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏛️</div>
+
+                <h3>Ministério da Agricultura</h3>
+
+                <p>
+                    Órgão responsável pelas políticas públicas voltadas ao agronegócio,
+                    segurança alimentar e sustentabilidade.
+                </p>
+
+                <a href="https://www.gov.br/agricultura/" target="_blank" class="btn-fonte">
+                    Visitar site →
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌍</div>
+
+                <h3>ONU – Objetivos de Desenvolvimento Sustentável</h3>
+
+                <p>
+                    Apresenta metas globais para promover um futuro mais justo,
+                    sustentável e equilibrado.
+                </p>
+
+                <a href="https://brasil.un.org/pt-br/sdgs" target="_blank" class="btn-fonte">
+                    Visitar site →
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📖</div>
+
+                <h3>Programa Agrinho</h3>
+
+                <p>
+                    Projeto educacional que incentiva práticas de cidadania,
+                    inovação e responsabilidade socioambiental.
+                </p>
+
+                <a href="https://www.sistemafaep.org.br/agrinho/" target="_blank" class="btn-fonte">
+                    Visitar site →
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌱</div>
+
+                <h3>IBGE</h3>
+
+                <p>
+                    Disponibiliza dados estatísticos importantes sobre agricultura,
+                    população e desenvolvimento no Brasil.
+                </p>
+
+                <a href="https://www.ibge.gov.br/" target="_blank" class="btn-fonte">
+                    Visitar site →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>🌱 Agro Forte, Futuro Sustentável | 2026</p>
+</footer>
+
+<script>
+let tamanhoFonte = 16;
+
+function alterarFonte(valor){
+    tamanhoFonte += valor;
+    document.body.style.fontSize = tamanhoFonte + "px";
+}
+
+function alternarTema(){
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "tema",
+        document.body.classList.contains("dark")
+        ? "dark"
+        : "light"
+    );
+}
+
+if(localStorage.getItem("tema")==="dark"){
+    document.body.classList.add("dark");
+}
+
+function lerPagina(){
+
+    speechSynthesis.cancel();
+
+    const texto =
+        document.querySelector("main")
+        ? document.querySelector("main").innerText
+        : document.body.innerText;
+
+    const fala = new SpeechSynthesisUtterance(texto);
+
+    fala.lang="pt-BR";
+    fala.rate=1;
+    fala.pitch=1;
+
+    speechSynthesis.speak(fala);
+}
+
+function pararLeitura(){
+    speechSynthesis.cancel();
+}
+</script>
+
+</body>
+</html>
